@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
+/* Test change for feature branch */
+
 @keyframes slideInDown {
     from { opacity: 0; transform: translateY(-30px); }
     to { opacity: 1; transform: translateY(0); }
 }
-// hace el rebote del logo de valle grande ps
+
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -24,50 +26,37 @@ body {
 .container {
     max-width: 600px;
     margin: 0 auto;
-    background: linear-gradient(135deg, rgba(255,255,255,.95), rgba(240,245,255,.95));
+    background: #ffffff; /* Fondo blanco */
     border-radius: 15px;
     box-shadow: 0 15px 50px rgba(0,0,0,.3);
     padding: 40px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,.3);
 }
-/*max-width: 600px;: Limita el ancho máximo del contenedor.
 
-margin: 0 auto;: Centra horizontalmente el contenedor en la página.
-
-background: linear-gradient(...): Crea un fondo con un degradado suave de blanco a un blanco/azul claro, usando transparencia (.95) para que se vea ligeramente el fondo de la página.
-
-border-radius: 15px;: Redondea las esquinas del contenedor.
-
-box-shadow: Agrega una sombra grande y suave para dar profundidad.
-
-padding: 40px;: Relleno interno para que el contenido no toque los bordes.
-
-backdrop-filter: blur(10px);: Este efecto clave aplica un desenfoque (blur) a lo que está detrás del contenedor, creando un efecto de vidrio esmerilado (frosted glass).
-
-border: Añade un borde blanco semi-transparente para un efecto pulido.*/
 .header {
     text-align: center;
     margin-bottom: 30px;
-}// el con tenido dentro del encabezado
+}
 
 .header img {
     max-width: 80px;
     animation: slideInDown .8s ease-out, bounce 2s infinite .8s;
 }
-//titulo principal
+
 .header h1 {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #3b82f6, #9333ea); /* Azul a morado */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-size: 28px;
     animation: slideInDown .8s ease-out .1s backwards;
     font-weight: 700;
+    color: #1f2937; /* Gris oscuro para el título */
 }
 
 .header p {
-    color: #666;
+    color: #4b5563; /* Gris medio */
     animation: slideInDown .8s ease-out .2s backwards;
 }
 
@@ -93,7 +82,7 @@ form {
 
 label {
     font-weight: 600;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #3b82f6, #9333ea); /* Azul a morado */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -101,7 +90,7 @@ label {
 
 input, select {
     padding: 12px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #d1d5db; /* Gris claro para bordes */
     border-radius: 8px;
     background: rgba(255,255,255,.8);
     transition: all .3s ease;
@@ -109,36 +98,36 @@ input, select {
 
 input:focus, select:focus {
     outline: 0;
-    border-color: #667eea;
+    border-color: #3b82f6; /* Azul en el foco */
     background: #fff;
-    box-shadow: 0 0 0 4px rgba(102,126,234,.15);
+    box-shadow: 0 0 0 4px rgba(59,130,246,.15); /* Sombra azul clara */
     transform: translateY(-2px);
 }
 
 button {
     width: 100%;
     padding: 13px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
+    background: linear-gradient(135deg, #3b82f6, #9333ea); /* Azul a morado */
+    color: #ffffff; /* Blanco */
     border: 0;
     border-radius: 8px;
     font-weight: 700;
     cursor: pointer;
     margin-top: 15px;
     transition: all .3s ease;
-    box-shadow: 0 4px 15px rgba(102,126,234,.3);
+    box-shadow: 0 4px 15px rgba(59,130,246,.3); /* Sombra azul */
     text-transform: uppercase;
 }
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(102,126,234,.5);
+    box-shadow: 0 8px 25px rgba(59,130,246,.5); /* Sombra más fuerte */
 }
 
 button:active {
     transform: translateY(-1px);
 }
-//disliplay none para que no se vea hasta que haya un mensaje
+
 .mensaje {
     margin-top: 20px;
     padding: 12px;
@@ -148,19 +137,20 @@ button:active {
     display: none;
     animation: slideInDown .4s ease-out;
 }
-//estilos para mensaje de exito 
+
 .mensaje.exito {
     background: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
-//estilos para mensaje de error
+
 .mensaje.error {
     background: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
-//estilos responsivos
+
+/* Estilos responsivos */
 @media (max-width: 480px) {
     .form-grid { grid-template-columns: 1fr; }
     .container { padding: 20px; }
